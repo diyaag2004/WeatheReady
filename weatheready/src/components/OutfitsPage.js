@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { WeatherContext } from '../contexts/WeatherContext';
 import { Link, useNavigate } from 'react-router-dom';
-import './WeatherWidget.css';
+import './OutfitsPage.css';
 
 
 
@@ -63,7 +63,8 @@ const OutfitsPage = () => {
   return (
     <>
       <div className="dress-widget-container">
-        <h3>👗 Outfits according to climate condition 🌦️ </h3>
+<h3>👗 Lets dress you up according to this weather🌦️</h3>
+<img src="/assets/images/wardrobe2.png" alt="Wardrobe" className="wardrobe-image" style={{ width: '50%', height: 'auto' }}/>
 
         {/* Display weather information */}
         {weatherData1 && (
@@ -83,13 +84,13 @@ const OutfitsPage = () => {
         <div className="image-container">
           <div>
             {shirtPrediction && (
-              <div className="image-container">
-                <img src={require(`../images/shirt/${shirtPrediction}.png`)} alt={shirtPrediction} />
+              <div className="image-wrapper">
+                <img src={require(`../images/shirt/${shirtPrediction}.png`)} alt={shirtPrediction} className='rounded-image' />
               </div>
             )}
             {jeansPrediction && (
-              <div className="image-container">
-                <img src={require(`../images/jeans/${jeansPrediction}.png`)} alt={jeansPrediction} />
+              <div className="image-wrapper">
+                <img src={require(`../images/jeans/${jeansPrediction}.png`)} alt={jeansPrediction} className='rounded-image' />
               </div>
             )}
           </div>
@@ -99,7 +100,7 @@ const OutfitsPage = () => {
         <button onClick={handleDressRecommendation} className='dressp'>
           Get Outfits Recommendations
         </button>
-        <Link to="/try-on"> <button className='dressp'>
+        <Link to="/try-on"> <button className='dressbutt'>
          3D try On
         </button> </Link> 
         {/* Error handling and navigation */}
