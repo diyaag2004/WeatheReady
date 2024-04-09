@@ -63,7 +63,7 @@ const OutfitsPage = () => {
   };
 
   return (
-    <>
+    <div className='outfits-page'>
 
       <div className="dress-widget-container">
         <h3>Lets dress you up according to the weather</h3>
@@ -117,7 +117,7 @@ const OutfitsPage = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 export default OutfitsPage;
