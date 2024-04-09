@@ -1,5 +1,5 @@
 .weather-widget-container {
-  width: 40%;
+  width: 70%;
   margin: 20px auto;
   text-align: center;
   background-color: #ffffff;
@@ -9,7 +9,7 @@
 }
 
 .dress-widget-container {
-  width: 40%;
+  width: 100%;
   margin: 100px auto;
   padding: 10px;
   padding-bottom: 20px;
@@ -81,5 +81,6 @@
 
 .image-container img {
   max-width: 50%;
+  max-width: 40vh;
   height: auto;
 }

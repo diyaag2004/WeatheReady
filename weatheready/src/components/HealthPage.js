@@ -1,8 +1,10 @@
 import React from 'react'
-
+import ChatApp from './ChatApp';
 function HealthPage() {
   return (
-    <div></div>
+    <div>
+      <ChatApp />
+    </div>
   )
 }
 

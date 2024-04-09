@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { WeatherContext } from '../contexts/WeatherContext';
 import { Link, useNavigate } from 'react-router-dom';
-import './OutfitsPage.css';
+import './WeatherWidget.css';
 
 
 
@@ -22,9 +22,7 @@ const OutfitsPage = () => {
   const humidity = weatherData1.main.humidity;
   const windSpeed = weatherData1.wind.speed;
 
-
   // Function to fetch dress recommendations from the backend API
-
   const fetchDressRecommendation = async () => {
     setLoading(true);
     setError(false);
@@ -63,11 +61,9 @@ const OutfitsPage = () => {
   };
 
   return (
-    <div className='outfits-page'>
-
+    <>
       <div className="dress-widget-container">
-        <h3>Lets dress you up according to the weather</h3>
-        <img src="/assets/images/wardrobe2.png" alt="Wardrobe" className="wardrobe-image" style={{ width: '50%', height: 'auto' }} />
+        <h3>👗 Outfits according to climate condition 🌦️ </h3>
 
         {/* Display weather information */}
         {weatherData1 && (
@@ -80,9 +76,8 @@ const OutfitsPage = () => {
           </div>
         )}
 
-
         {/* Display loading message */}
-        {loading ? <p className='loading'>Telling you dress Recommendation...</p> : null}
+        {loading ? <p className='loading'>Telling you dress Recommendation 🌞...</p> : null}
 
         {/* Display predicted shirt and jeans images */}
         <div className="image-container">
@@ -105,7 +100,7 @@ const OutfitsPage = () => {
           Get Outfits Recommendations
         </button>
         <Link to="/try-on"> <button className='dressp'>
-         #D try On
+         3D try On
         </button> </Link> 
         {/* Error handling and navigation */}
         {error && (
@@ -117,7 +112,8 @@ const OutfitsPage = () => {
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 };
+
 export default OutfitsPage;

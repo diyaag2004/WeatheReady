@@ -1,8 +1,6 @@
-.canva{
-    width : 100vw;
-    height:100vh;
-    position : absolute;
-    top:0;
-    left:0;
-    overflow :hidden;
+.canva {
+    display: grid;
+    place-items: center; /* Centers both horizontally and vertically */
+    height: 100vh; /* Ensures the parent takes full viewport height */
+
 }
