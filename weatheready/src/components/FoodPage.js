@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { WeatherContext } from '../contexts/WeatherContext';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import './FoodPage.css';
 
 const FoodPage = () => {
   // Get weather data from context
@@ -80,7 +80,7 @@ const FoodPage = () => {
 
   return (
     <>
-      <div className="dress-widget-container">
+      <div className="food-widget-container">
         <h3>Food Recommendations based on Weather</h3>
 
         {/* Display weather information */}
@@ -98,17 +98,17 @@ const FoodPage = () => {
 
         {/* Display parsed food recommendations */}
         {!isLoading2 && foodRecommendation && (
-          <div className="recommendation-container">{foodRecommendation}</div>
+          <div className="recommendation-container"> <p className="food-recommendation">{foodRecommendation}</p></div>
         )}
 
         {/* Button to trigger recommendations */}
-        <button onClick={handleFoodRecommendation} className="dressp">
+        <button onClick={handleFoodRecommendation} className="food-button">
           Get Food Recommendations
         </button>
 
         {/* Error handling and navigation */}
         {error && (
-          <div>
+          <div className='error-container'>
             <p>An error occurred while fetching recommendations.</p>
             <p>Do you want to go back to the home screen?</p>
             <Link to="/">
