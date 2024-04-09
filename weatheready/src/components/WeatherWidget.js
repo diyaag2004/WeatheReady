@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import './WeatherWidget.css';
 
 import { WeatherContext } from '../contexts/WeatherContext';
-
+import Header from './Header';
 const WeatherWidget = () => {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState(null);
@@ -63,8 +63,9 @@ const WeatherWidget = () => {
     fetchWeather();
   };
 
-  return (
+  return (<><Header />
     <div className="weather-widget-container">
+       
     <h2 className="widget-title">Weather Widget</h2>
     <div className="input-group">
       <input 
@@ -83,11 +84,13 @@ const WeatherWidget = () => {
         <h2>Current Weather</h2>
         <p>Location: {weatherData.name}</p>
         <p>Temperature: {weatherData.main.temp} °C</p>
-        <p>Humidity: {weatherData.weather[0].description}</p>
+        <p>Weather: {weatherData.weather[0].description}</p>
+        <p>Humidity: {weatherData.main.humidity}%</p>
         <p>Wind Speed: {weatherData.wind.speed} m/s</p>
       </div>
     )}
   </div>
+  </>
   );
 };
 

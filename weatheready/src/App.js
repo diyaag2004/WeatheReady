@@ -15,7 +15,7 @@ function App() {
     <Router>
     <div className="App">
       <Navbar /> 
-      <Header />
+     
       
       <Routes>
         <Route path="/outfits" element={<OutfitsPage/>} />

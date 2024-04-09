@@ -53,33 +53,35 @@ const OutfitsPage = () => {
   
   return (
     <>
-      <h1>Outfits according to climate condition</h1>
+    <div className="dress-widget-container">
+      <h3>Outfits according to climate condition</h3>
       {weatherData1 && (
         <div>
-          <h2>City: {weatherData1.name}</h2>
-          <h3>Temperature: {weatherData1.main.temp}°C</h3>
-          <h4>Humidity: {weatherData1.weather[0].description}%</h4>
-          <h4>Wind Speed: {weatherData1.wind.speed} Km/s</h4>
+          <h4>City: {weatherData1.name}</h4>
+          <h6>Temperature: {weatherData1.main.temp}°C</h6>
+          <h6>Humidity: {weatherData1.weather[0].description}%</h6>
+          <h6>Wind Speed: {weatherData1.wind.speed} Km/s</h6>
         </div>
       )}
 
       {loading ? <p className='loading'>Telling you dress Recommendation...</p> : null}
       <div>
-        {shirtPrediction && <h1>Predicted Shirt: {shirtPrediction}</h1>}
-        {jeansPrediction && <h1>Predicted Jeans: {jeansPrediction}</h1>}
+        {shirtPrediction && <h2>Predicted Shirt: {shirtPrediction}</h2>}
+        {jeansPrediction && <h2>Predicted Jeans: {jeansPrediction}</h2>}
       </div>
 
-      <button onClick={handleDressRecommendation}>Get Outfits Recommendations</button>
+      <button onClick={handleDressRecommendation} className='dressp'>Get Outfits Recommendations</button>
 
      
       {error && (
         <div>
           <p>An error occurred while fetching recommendations.</p>
           <p>Do you want to go back to the home screen?</p>
-          <Link to="/"><button >Yes, go home</button></Link>
+          <Link to="/"><button>Yes, go home</button></Link>
           <button onClick={() => setError(false)}>No, stay here</button>
         </div>
       )}
+      </div>
     </>
   );
 };
