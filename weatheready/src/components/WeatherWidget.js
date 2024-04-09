@@ -87,7 +87,7 @@ const WeatherWidget = () => {
           <button onClick={handleCitySearch}>Search by city</button>
           <button onClick={handleLocationSearch}>Search by location</button>
         </div>
-        {loadingW && <p>⭕ First see weather 🌦️ then proceed further...</p>}
+        {loadingW && <p>🌸 "Blossoming with excitement! But first, let's see what the weather has in store 🌦️🌸"</p>}
         {loading && <div>Loading...</div>}
         {error && <div>Error fetching weather data</div>}
 

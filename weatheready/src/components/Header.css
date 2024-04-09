@@ -25,12 +25,13 @@
   /*}*/
   
   .header-paragraph {
-    color: #FFFCFB;
+    color: #d6bbdc;
     max-width: 400px;
     display: block;
     padding-bottom: 25px;
     margin: 0 auto;
     text-align: center;
+    font-style: italic;
 
   }
   
