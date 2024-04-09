@@ -97,7 +97,7 @@ const OutfitsPage = () => {
         </div>
          
         {/* Button to trigger recommendations */}
-        <button onClick={handleDressRecommendation} className='dressp'>
+        <button onClick={handleDressRecommendation} className='dressbutt'>
           Get Outfits Recommendations
         </button>
         <Link to="/try-on"> <button className='dressbutt'>
