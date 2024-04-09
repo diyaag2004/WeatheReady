@@ -1,0 +1,40 @@
+
+#navbar {
+    background-color: #FFFCFB;
+    border-bottom: 1px solid #978FCD;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 300px;
+  }
+  
+  #navbarNav {
+    padding: 0;
+    padding-right: 30px;
+    background-color: #FFFCFB;
+  }
+  
+  .navbar-brand {
+    padding: 0;
+    margin-left: 30px;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar-brand {
+        margin-left: 25px;
+    }
+    #content-recommendations-preview {
+        margin-bottom: 30px;
+    }
+  
+    #content-additional-text {
+    max-width: 285px;
+    display: block;
+    margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .navbar-brand {
+        margin-left: 10px;
+    }
+  }
+  
