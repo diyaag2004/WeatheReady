@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './GlassMorphismCards.css';
 import VanillaTilt from 'vanilla-tilt';
 
@@ -21,7 +20,7 @@ const GlassMorphismCards = () => {
           <h2>01</h2>
           <h3>Card One</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum tempore ratione odit libero facere unde temporibus vel consequuntur quae ad, distinctio tenetur dicta dolorem aliquam, voluptatibus repudiandae, fuga ducimus corrupti.</p>
-          <Link to="/outfits">Read More</Link>
+
         </div>
       </div>
       <div className="card" id="card2">
@@ -29,7 +28,7 @@ const GlassMorphismCards = () => {
           <h2>02</h2>
           <h3>Card Two</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum tempore ratione odit libero facere unde temporibus vel consequuntur quae ad, distinctio tenetur dicta dolorem aliquam, voluptatibus repudiandae, fuga ducimus corrupti.</p>
-          <Link to="/outfits">Read More</Link>
+  
         </div>
       </div>
       <div className="card" id="card3">
