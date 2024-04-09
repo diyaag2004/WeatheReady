@@ -16,8 +16,7 @@ const Header = () => {
           <div className="line light" id="main-header-line"></div>
           
           <p className="header-paragraph">
-            WeatheReady is a web app that helps you stay stylish and healthy everyday based on the weather in your area.
-            <br />
+            WeatheReady is a web app that tells you which clothing items you should wear today.
             <br />
             <TrackVisibility>
             {({ isVisible }) =>

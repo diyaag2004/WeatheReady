@@ -41,26 +41,7 @@ const GlassMorphismCards = () => {
     <p>Get support for your well-being. Access period relief suggestions, dietary advice, and more, all in one place. 💪🧘‍♀️</p>
     <Link to="/health">Start Feeling Better</Link> 
   </div>
-</div>
-
-<div class="card" id="card4">
-  <div class="content">
-    <h2>04 🌍🏞️</h2>
-    <h3>Places to Visit</h3>
-    <p>Adventure awaits! Get suggestions for local attractions and sightseeing spots based on the current weather. 🏰🏖️</p>
-    <Link to="/food">Discover Places</Link> 
-  </div>
-</div>
-
-<div class="card" id="card5">
-  <div class="content">
-    <h2>05 🏄‍♀️🎭</h2>
-    <h3>Activity Suggestions</h3>
-    <p>Don't let the weather stop your fun! Discover indoor and outdoor activities tailored to today's forecast. 🌦️🌈</p>
-    <Link to="/food">Explore Activities</Link> 
-  </div>
-</div>
-</div>
+</div></div>
   );
 };
 
