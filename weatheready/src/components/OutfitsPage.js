@@ -2,20 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { WeatherContext } from '../contexts/WeatherContext';
 import { Link, useNavigate } from 'react-router-dom';
-import './OutfitsPage.css';
+import '../App.css';
+
+
+
 const OutfitsPage = () => {
+  // Get weather data from context
   const { weatherData1, setWeatherData1 } = useContext(WeatherContext);
   const navigate = useNavigate();
 
+  // State variables for predictions, loading, and error
   const [shirtPrediction, setShirtPrediction] = useState('');
   const [jeansPrediction, setJeansPrediction] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
- 
+
+  // Extract weather parameters
   const temperature = weatherData1.main.temp;
   const humidity = weatherData1.main.humidity;
   const windSpeed = weatherData1.wind.speed;
 
+  // Function to fetch dress recommendations from the backend API
   const fetchDressRecommendation = async () => {
     setLoading(true);
     setError(false);
@@ -27,7 +34,9 @@ const OutfitsPage = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          Temperature: temperature, Humidity: humidity, 'Wind speed': windSpeed
+          Temperature: temperature, 
+          Humidity: humidity, 
+          'Wind speed': windSpeed 
         }),
       });
 
@@ -46,41 +55,62 @@ const OutfitsPage = () => {
     }
   };
 
+  // Event handler for the "Get Outfits Recommendations" button
   const handleDressRecommendation = () => {
     fetchDressRecommendation();
   };
 
-  
   return (
     <>
-    <div className="dress-widget-container">
-      <h3>Outfits according to climate condition</h3>
-      {weatherData1 && (
-        <div>
-          <h4>City: {weatherData1.name}</h4>
-          <h6>Temperature: {weatherData1.main.temp}°C</h6>
-          <h6>Humidity: {weatherData1.weather[0].description}%</h6>
-          <h6>Wind Speed: {weatherData1.wind.speed} Km/s</h6>
+      <div className="dress-widget-container">
+        <h3>Outfits according to climate condition</h3>
+
+        {/* Display weather information */}
+        {weatherData1 && (
+          <div>
+            <h4>City: {weatherData1.name}</h4>
+            <h6>Temperature: {weatherData1.main.temp}°C</h6>
+            <h6>Weather: {weatherData1.weather[0].description}%</h6>
+            <h6>Humidity: {weatherData1.main.humidity}%</h6>
+            <h6>Wind Speed: {weatherData1.wind.speed} Km/s</h6>
+          </div>
+        )}
+
+        {/* Display loading message */}
+        {loading ? <p className='loading'>Telling you dress Recommendation...</p> : null}
+
+        {/* Display predicted shirt and jeans images */}
+        <div className="image-container">
+          <div>
+            {shirtPrediction && (
+              <div className="image-container">
+                <img src={require(`../images/shirt/${shirtPrediction}.png`)} alt={shirtPrediction} />
+              </div>
+            )}
+            {jeansPrediction && (
+              <div className="image-container">
+                <img src={require(`../images/jeans/${jeansPrediction}.png`)} alt={jeansPrediction} />
+              </div>
+            )}
+          </div>
         </div>
-      )}
-
-      {loading ? <p className='loading'>Telling you dress Recommendation...</p> : null}
-      <div>
-        {shirtPrediction && <h2>Predicted Shirt: {shirtPrediction}</h2>}
-        {jeansPrediction && <h2>Predicted Jeans: {jeansPrediction}</h2>}
-      </div>
-
-      <button onClick={handleDressRecommendation} className='dressp'>Get Outfits Recommendations</button>
-
-     
-      {error && (
-        <div>
-          <p>An error occurred while fetching recommendations.</p>
-          <p>Do you want to go back to the home screen?</p>
-          <Link to="/"><button>Yes, go home</button></Link>
-          <button onClick={() => setError(false)}>No, stay here</button>
-        </div>
-      )}
+         
+        {/* Button to trigger recommendations */}
+        <button onClick={handleDressRecommendation} className='dressp'>
+          Get Outfits Recommendations
+        </button>
+        <Link to="/try-on"> <button className='dressp'>
+         #D try On
+        </button> </Link> 
+        {/* Error handling and navigation */}
+        {error && (
+          <div>
+            <p>An error occurred while fetching recommendations.</p>
+            <p>Do you want to go back to the home screen?</p>
+            <Link to="/"><button>Yes, go home</button></Link>
+            <button onClick={() => setError(false)}>No, stay here</button>
+          </div>
+        )}
       </div>
     </>
   );
