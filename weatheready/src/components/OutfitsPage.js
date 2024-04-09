@@ -63,7 +63,8 @@ const OutfitsPage = () => {
   return (
     <>
       <div className="dress-widget-container">
-        <h3>Outfits according to climate condition</h3>
+        <h3>Lets dress you up according to the weather</h3>
+        <img src="/assets/images/wardrobe2.png" alt="Wardrobe" className="wardrobe-image" style={{ width: '50%', height: 'auto' }} />
 
         {/* Display weather information */}
         {weatherData1 && (
