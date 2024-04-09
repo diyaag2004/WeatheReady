@@ -1,0 +1,7 @@
+.outfits-page {
+    background-image: url('../../public/assets/images/bg.png'); 
+    background-size: cover; /* Adjust the background size as needed */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-position: center; /* Center the background image */
+    /* Add any additional styles for your OutfitsPage component */
+  }

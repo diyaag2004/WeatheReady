@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { WeatherContext } from '../contexts/WeatherContext';
 import { Link, useNavigate } from 'react-router-dom';
-import '../App.css';
+import './OutfitsPage.css';
 const OutfitsPage = () => {
   const { weatherData1, setWeatherData1 } = useContext(WeatherContext);
   const navigate = useNavigate();
