@@ -56,7 +56,7 @@ const GlassMorphismCards = () => {
     <h2>05 🏄‍♀️🎭</h2>
     <h3>Activity Suggestions</h3>
     <p>Don't let the weather stop your fun! Discover indoor and outdoor activities tailored to today's forecast. 🌦️🌈</p>
-    <Link to="/activity">Explore Activities</Link> 
+    <Link to="/activities">Explore Activities</Link> 
   </div>
 </div>
 </div>
