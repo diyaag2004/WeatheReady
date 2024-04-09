@@ -1,6 +1,6 @@
 
 body {
-    font-family: sans-serif;
+  font-family: "Quicksand", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@ body {
   .bot-message {
     text-align: left;
     padding: 10px;
-    background-color: #e0f0e0;
+    background-color: #fdfdb8;
     border-radius: 10px;
     margin-bottom: 5px;
   }
@@ -55,7 +55,7 @@ body {
   }
   
   button {
-    background-color: #4CAF50;
+    background-color: #a72fd3;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -65,9 +65,19 @@ body {
   
   #loader {
     display: none;
+    color: #a72fd3;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+ 
+  .chatbotimg {
+    position: fixed;
+    bottom: 120px;
+    left: 340px;
+    margin-bottom: 20px;
+    margin-left: 20px; 
   }
   

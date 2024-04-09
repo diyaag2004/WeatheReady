@@ -49,6 +49,7 @@ function ChatApp() {
   };
 
   return (
+    <>  
     <div id="chat-container">
       <h4>Dimita, Your Personal<br /> Health Assistant!🌞</h4><br />
       <div id="chat-history">
@@ -74,6 +75,8 @@ function ChatApp() {
         <img src={loader} width="150px" alt="Loahii..." />
       </div>
     </div>
+    <img src="assets/images/chatbot.png" height="180" width="170" alt="Logo image" className='chatbotimg' />
+    </>
   );
 }
 
