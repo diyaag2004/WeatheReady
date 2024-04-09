@@ -1,5 +1,5 @@
-.outfits-page {
-    background-image: url('../../public/assets/images/bg.png'); 
+body {
+    background-image: url('../../public/assets/images/purplebg.jpg'); 
     background-size: cover; /* Adjust the background size as needed */
     background-repeat: no-repeat; /* Prevent the background from repeating */
     background-position: center; /* Center the background image */
