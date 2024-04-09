@@ -30,7 +30,7 @@ const GlassMorphismCards = () => {
     <h2>02 🍏🍽️</h2>
     <h3>Food & Nutrition Guide</h3>
     <p>Fuel your body right! Get personalized meal, snack, and intake recommendations based on today's weather and your dietary needs. 🥗🍔</p>
-    <Link to="/food-recommendations">See Today's Menu</Link> 
+    <Link to="/food">See Today's Menu</Link> 
   </div>
 </div>
 
@@ -39,7 +39,7 @@ const GlassMorphismCards = () => {
     <h2>03 🩺🩹</h2>
     <h3>Your Personal Health Assistant</h3>
     <p>Get support for your well-being. Access period relief suggestions, dietary advice, and more, all in one place. 💪🧘‍♀️</p>
-    <Link to="/health-assistant">Start Feeling Better</Link> 
+    <Link to="/health">Start Feeling Better</Link> 
   </div>
 </div></div>
   );

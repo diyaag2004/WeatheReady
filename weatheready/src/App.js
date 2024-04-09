@@ -8,7 +8,9 @@ import Header from './components/Header';
 
 import OutfitsPage from './components/OutfitsPage';
 import Homepage from './components/Homepage';
-
+import FoodPage from './components/FoodPage';
+import HealthPage from './components/HealthPage';
+import Modelcont from './components/Modelcont';
 function App() {
   return (
     <WeatherProvider>
@@ -18,8 +20,12 @@ function App() {
      
       
       <Routes>
-        <Route path="/outfits" element={<OutfitsPage/>} />
+       
         <Route path="/"  element={<Homepage />} />
+        <Route path="/outfits" element={<OutfitsPage/>} />
+        <Route path="/food" element={<FoodPage/>} />
+        <Route path="/health" element={<HealthPage/>} />
+        <Route path="/try-on" element={<Modelcont/>} />
        
       </Routes>
     </div>
