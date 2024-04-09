@@ -10,21 +10,24 @@ const Header = () => {
       <div className="row">
         <div className="col header-content">
         <img src="assets/images/WeatherIcon.png" height="160" width="200" alt="Logo image" className='cloud-img' />
-          <h1 id="header-title" className="text-uppercase">
+        <TrackVisibility>
+            {({ isVisible }) =>
+            <div className={isVisible? "animated__animated animate__rotateIn": ""}>
+              <div>
+                <h1 id="header-title" className="text-uppercase">
             WeatheReady
           </h1>
           <div className="line light" id="main-header-line"></div>
           
           <p className="header-paragraph">
           WeatheReady is a web app that helps you stay stylish and healthy everyday based on the weather in your area.
-            <br />
-            <TrackVisibility>
-            {({ isVisible }) =>
-            <div className={isVisible? "animated__animated animate__fadeIn": ""}>
+            <br />        
             <span className="text-uppercase">Enter your location below!</span>
+            </p>
+            </div>
             </div>}
             </TrackVisibility>
-          </p>
+       
         </div>
       </div>
     </header>

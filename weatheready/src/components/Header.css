@@ -45,7 +45,27 @@
 
   .cloud-img {
     position: absolute;
-  left: 300px;
+  left: 200px;
   top: 50%;
   transform: translateY(-50%);
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
   }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  .animate__animated.animate__rotateIn {
+    --animate-duration: 5s;
+  }
+  
