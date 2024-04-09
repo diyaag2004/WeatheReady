@@ -1,6 +1,8 @@
 // Header.js
 import React from 'react';
-import './Header.css'; // Import the CSS file for styling
+import './Header.css';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 const Header = () => {
   return (
@@ -17,7 +19,12 @@ const Header = () => {
             WeatheReady is a web app that helps you stay stylish and healthy everyday based on the weather in your area.
             <br />
             <br />
+            <TrackVisibility>
+            {({ isVisible }) =>
+            <div className={isVisible? "animated__animated animate__fadeIn": ""}>
             <span className="text-uppercase">Enter your location below!</span>
+            </div>}
+            </TrackVisibility>
           </p>
         </div>
       </div>
