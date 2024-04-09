@@ -65,39 +65,6 @@ const OutfitsPage = () => {
   return (
     <>
 
-    <div className="dress-widget-container">
-      <h3>Outfits according to climate condition</h3>
-      {weatherData1 && (
-        <div>
-          <h4>City: {weatherData1.name}</h4>
-          <h6>Temperature: {weatherData1.main.temp}°C</h6>
-          <h6>Weather: {weatherData1.weather[0].description}%</h6>
-          <h6>Humidity: {weatherData1.main.humidity}%</h6>
-          <h6>Wind Speed: {weatherData1.wind.speed} Km/s</h6>
-        </div>
-      )}
-
-      {loading ? <p className='loading'>Telling you dress Recommendation...</p> : null}
-     <div class="image-container">
-      <div>
-        {shirtPrediction && (
-          <div className="image-container">
-            {/* <h2>Predicted Shirt: {shirtPrediction}</h2> */}
-            <img src={require(`../images/shirt/${shirtPrediction}.png`)} alt={shirtPrediction} />
-        
-            
-          </div>
-        )}
-        {jeansPrediction && (
-          <div className="image-container">
-            {/* <h2>Predicted Jeans: {jeansPrediction}</h2> */}
-            <img src={require(`../images/jeans/${jeansPrediction}.png`)} alt={jeansPrediction} />
-          </div>
-        )}
-      </div>
-      </div>
-     
-
       <div className="dress-widget-container">
         <h3>Lets dress you up according to the weather</h3>
         <img src="/assets/images/wardrobe2.png" alt="Wardrobe" className="wardrobe-image" style={{ width: '50%', height: 'auto' }} />
@@ -153,5 +120,4 @@ const OutfitsPage = () => {
     </>
   );
 };
-
 export default OutfitsPage;
