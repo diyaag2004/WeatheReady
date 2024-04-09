@@ -12,6 +12,7 @@ import FoodPage from './components/FoodPage';
 import HealthPage from './components/HealthPage';
 import Modelcont from './components/Modelcont';
 import VistingPlace from './components/VistingPlace';
+import Activities from './components/Activities';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
         <Route path="/health" element={<HealthPage/>} />
         <Route path="/try-on" element={<Modelcont/>} />
         <Route path="/visting-place" element={<VistingPlace/>} />
+        <Route path="/activities" element={<Activities/>} />
+
 
        
       </Routes>
