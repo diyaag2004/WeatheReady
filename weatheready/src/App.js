@@ -1,19 +1,30 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { WeatherProvider } from './contexts/WeatherContext';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar'; 
-import Homepage from './components/Homepage';
+import Header from './components/Header';
+
 import OutfitsPage from './components/OutfitsPage';
-import { WeatherProvider } from './contexts/WeatherContext';
-import WeatherWidget from './components/WeatherWidget';
+import Homepage from './components/Homepage';
 
 function App() {
   return (
-    <div className='App'>
-          <Navbar />
-          <Homepage />
+    <WeatherProvider>
+    <Router>
+    <div className="App">
+      <Navbar /> 
+      <Header />
+      
+      <Routes>
+        <Route path="/outfits" element={<OutfitsPage/>} />
+        <Route path="/"  element={<Homepage />} />
+       
+      </Routes>
     </div>
+  </Router>
+  </WeatherProvider>
   );
 }
 

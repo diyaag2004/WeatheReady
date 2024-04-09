@@ -1,5 +1,7 @@
+// Header.js
 import React from 'react';
-import './Header.css'; 
+import './Header.css'; // Import the CSS file for styling
+
 const Header = () => {
   return (
     <header className="container-fluid text-center" id="header">

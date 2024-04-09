@@ -1,4 +1,10 @@
- .header-content {
+/* Header.css */
+
+/*#header {
+    /* Add styles for the header container */
+ /* }*/
+  
+  .header-content {
     position: relative;
     margin-top: 10vh;
     align-items: center;
@@ -14,6 +20,10 @@
     margin-top: 50px;
   }
   
+  /*#main-header-line {
+    /* Add styles for the header line */
+  /*}*/
+  
   .header-paragraph {
     color: #FFFCFB;
     max-width: 395px;
@@ -26,10 +36,10 @@
   
   .line {
     width: 20%;
-    height: 2px; 
-    background-color: white;
-    margin-left: auto; 
-    margin-right: auto;
+    height: 2px; /* Adjust height as needed */
+    background-color: white; /* Set the color to white */
+    margin-left: auto; /* Align the line to the right */
+    margin-right: auto; /* Align the line to the left */
     margin-bottom: 30px;
   }
 

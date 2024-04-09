@@ -59,7 +59,7 @@ const WeatherWidget = () => {
   };
 
   const handleLocationSearch = () => {
-    setCity(''); // Clear city input field
+    setCity('');
     fetchWeather();
   };
 
@@ -83,7 +83,8 @@ const WeatherWidget = () => {
         <h2>Current Weather</h2>
         <p>Location: {weatherData.name}</p>
         <p>Temperature: {weatherData.main.temp} °C</p>
-        <p>Weather: {weatherData.weather[0].description}</p>
+        <p>Humidity: {weatherData.weather[0].description}</p>
+        <p>Wind Speed: {weatherData.wind.speed} m/s</p>
       </div>
     )}
   </div>

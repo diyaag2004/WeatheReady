@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './GlassMorphismCards.css';
 import VanillaTilt from 'vanilla-tilt';
 
@@ -15,32 +16,32 @@ const GlassMorphismCards = () => {
 
   return (
     <div className="container">
-      <div className="card" id="card1">
-        <div className="content">
-          <h2>01</h2>
-          <h3>Dress Up</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum tempore ratione odit libero facere unde temporibus vel consequuntur quae ad, distinctio tenetur dicta dolorem aliquam, voluptatibus repudiandae, fuga ducimus corrupti.</p>
-  
+      <div class="card" id="card1">
+  <div class="content">
+    <h2>01 👕👚</h2> 
+    <h3>Outfit Recommendations</h3>
+    <p>Discover the perfect outfit for today's weather! We'll suggest clothing and accessories to keep you comfortable and stylish. ☀️❄️🌧️</p>
+    <Link to="/outfits">Get Outfit Ideas</Link> 
+  </div>
+</div>
 
-        </div>
-      </div>
-      <div className="card" id="card2">
-        <div className="content" >
-          <h2>02</h2>
-          <h3>Eat Well</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum tempore ratione odit libero facere unde temporibus vel consequuntur quae ad, distinctio tenetur dicta dolorem aliquam, voluptatibus repudiandae, fuga ducimus corrupti.</p>
-     
-        </div>
-      </div>
-      <div className="card" id="card3">
-        <div className="content">
-          <h2>03</h2>
-          <h3>Stay Healthy</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum tempore ratione odit libero facere unde temporibus vel consequuntur quae ad, distinctio tenetur dicta dolorem aliquam, voluptatibus repudiandae, fuga ducimus corrupti.</p>
-          <a href="#">Read More</a>
-        </div>
-      </div>
-    </div>
+<div class="card" id="card2">
+  <div class="content">
+    <h2>02 🍏🍽️</h2>
+    <h3>Food & Nutrition Guide</h3>
+    <p>Fuel your body right! Get personalized meal, snack, and intake recommendations based on today's weather and your dietary needs. 🥗🍔</p>
+    <Link to="/food-recommendations">See Today's Menu</Link> 
+  </div>
+</div>
+
+<div class="card" id="card3">
+  <div class="content">
+    <h2>03 🩺🩹</h2>
+    <h3>Your Personal Health Assistant</h3>
+    <p>Get support for your well-being. Access period relief suggestions, dietary advice, and more, all in one place. 💪🧘‍♀️</p>
+    <Link to="/health-assistant">Start Feeling Better</Link> 
+  </div>
+</div></div>
   );
 };
 
