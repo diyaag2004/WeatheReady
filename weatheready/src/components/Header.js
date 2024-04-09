@@ -9,6 +9,8 @@ const Header = () => {
     <header className="container-fluid text-center" id="header">
       <div className="row">
         <div className="col header-content">
+        <img src="assets/images/WeatherIcon.png" height="160" width="200" alt="Logo image" className='cloud-img2' />
+        <img src="assets/images/WeatherIcon.png" height="160" width="200" alt="Logo image" className='cloud-img1' />
         <img src="assets/images/WeatherIcon.png" height="160" width="200" alt="Logo image" className='cloud-img' />
           <h1 id="header-title" className="text-uppercase">
             WeatheReady
@@ -16,7 +18,7 @@ const Header = () => {
           <div className="line light" id="main-header-line"></div>
           
           <p className="header-paragraph">
-          WeatheReady is a web app that helps you stay stylish and healthy everyday based on the weather in your area.
+          "Welcome to WeatherReady! Your ultimate destination for style, food, health tips, and adventure suggestions. Let's make to everyday extraordinary! 🌟🥗💬🗺️✨"
             <br />
             <TrackVisibility>
             {({ isVisible }) =>
