@@ -68,9 +68,9 @@ const OutfitsPage = () => {
         {/* Display weather information */}
         {weatherData1 && (
           <div>
-            <h4>City: {weatherData1.name}</h4>
+            <h6>City: {weatherData1.name}</h6>
             <h6>Temperature: {weatherData1.main.temp}°C</h6>
-            <h6>Weather: {weatherData1.weather[0].description}%</h6>
+            <h6>Weather: {weatherData1.weather[0].description}</h6>
             <h6>Humidity: {weatherData1.main.humidity}%</h6>
             <h6>Wind Speed: {weatherData1.wind.speed} Km/s</h6>
           </div>

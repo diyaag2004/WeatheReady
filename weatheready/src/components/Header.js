@@ -16,7 +16,7 @@ const Header = () => {
           <div className="line light" id="main-header-line"></div>
           
           <p className="header-paragraph">
-          "Welcome to WeatherReady! Your ultimate destination for style, food, health tips, and adventure suggestions. Let's make to everyday extraordinary! 🌟🥗💬🗺️✨"
+          WeatheReady is a web app that helps you stay stylish and healthy everyday based on the weather in your area.
             <br />
             <TrackVisibility>
             {({ isVisible }) =>
