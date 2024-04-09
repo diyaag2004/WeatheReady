@@ -25,13 +25,12 @@
   /*}*/
   
   .header-paragraph {
-    color: #d6bbdc;
+    color: #FFFCFB;
     max-width: 400px;
     display: block;
     padding-bottom: 25px;
     margin: 0 auto;
     text-align: center;
-    font-style: italic;
 
   }
   
@@ -44,46 +43,9 @@
     margin-bottom: 30px;
   }
 
-  .cloud-img{
+  .cloud-img {
     position: absolute;
-  left: 220px;
+  left: 300px;
   top: 50%;
   transform: translateY(-50%);
-  animation-name: floating;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
   }
-  .cloud-img1{
-  position: absolute;
-  left: 70px;
-  top: 40%;
-  transform: translateY(-50%);
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  }
-  .cloud-img2{
-    position: absolute;
-  left: 150px;
-  top: 20%;
-  transform: translateY(-50%);
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  }
-
-  @keyframes floating {
-    0% {
-      transform: translateY(0%);
-    }
-    50% {
-      transform: translateY(-10%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  
