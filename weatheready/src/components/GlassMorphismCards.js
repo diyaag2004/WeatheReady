@@ -18,23 +18,24 @@ const GlassMorphismCards = () => {
       <div className="card" id="card1">
         <div className="content">
           <h2>01</h2>
-          <h3>Card One</h3>
+          <h3>Dress Up</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum tempore ratione odit libero facere unde temporibus vel consequuntur quae ad, distinctio tenetur dicta dolorem aliquam, voluptatibus repudiandae, fuga ducimus corrupti.</p>
+  
 
         </div>
       </div>
       <div className="card" id="card2">
         <div className="content" >
           <h2>02</h2>
-          <h3>Card Two</h3>
+          <h3>Eat Well</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum tempore ratione odit libero facere unde temporibus vel consequuntur quae ad, distinctio tenetur dicta dolorem aliquam, voluptatibus repudiandae, fuga ducimus corrupti.</p>
-  
+     
         </div>
       </div>
       <div className="card" id="card3">
         <div className="content">
           <h2>03</h2>
-          <h3>Card Three</h3>
+          <h3>Stay Healthy</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum tempore ratione odit libero facere unde temporibus vel consequuntur quae ad, distinctio tenetur dicta dolorem aliquam, voluptatibus repudiandae, fuga ducimus corrupti.</p>
           <a href="#">Read More</a>
         </div>
