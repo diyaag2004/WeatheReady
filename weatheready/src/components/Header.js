@@ -20,6 +20,7 @@ const Header = () => {
           <p className="header-paragraph">
           "Welcome to WeatherReady! Your ultimate destination for style, food, health tips, and adventure suggestions. Let's make to everyday extraordinary! 🌟🥗💬🗺️✨"
             <br />
+            <br />
             <img src="assets/images/sun.png" height="160" width="200" alt="Logo image" className='sun-img' />
             <TrackVisibility>
             {({ isVisible }) =>
