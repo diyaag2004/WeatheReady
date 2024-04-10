@@ -7,7 +7,7 @@ import './WeatherWidget.css';
 
 function Activities() {
 
-    const [suggestions, setSuggestions] = useState([]);
+    
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
     const { weatherData1 } = useContext(WeatherContext);
@@ -43,7 +43,7 @@ function Activities() {
       
       if (response.ok) {
         console.log(data.ActivitySuggestion);
-        setActivites(parseActivites(data.ActivitySuggestion));   
+        setActivites(parseActivities(data.ActivitySuggestion));   
         
       } else {
         setError(true);
@@ -61,30 +61,74 @@ function Activities() {
     
        
       
-  const parseActivites = (text) => {
-    let lines = text.split('\n');
-    let parsedLines = [];
-
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      if (line.trim().startsWith('**')) {
-        let startIndex = line.lastIndexOf('**');
-        let endIndex = line.length - 2;
-        if (startIndex !== endIndex) {
-          line = `**${line.substring(0, endIndex)}**${line.substring(endIndex + 2)}`;
-        }
-        parsedLines.push(<h3 key={i}><strong>{line.substring(2)}</strong></h3>);
-      } else if (line.startsWith('* ')) {
-        parsedLines.push(<li key={i}>{line.substring(2)}</li>);
-      } else if (line.startsWith('*')) {
-        parsedLines.push(<li key={i}>{line.substring(1)}</li>);
-      } else {
-        parsedLines.push(<p key={i}>{line}</p>);
-      }
-    }
-
-    return <div>{parsedLines}</div>;
-  };
+        const parseActivities = (text) => {
+          let lines = text.split('\n');
+          let parsedLines = [];
+        
+          for (let i = 0; i < lines.length; i++) {
+            let line = lines[i];
+        
+            // Check for headings
+            if (line.trim().startsWith('**')) {
+              let startIndex = line.lastIndexOf('**');
+              let endIndex = line.length - 2;
+              if (startIndex !== endIndex) {
+                line = `**${line.substring(0, endIndex)}**${line.substring(endIndex + 2)}`;
+              }
+              parsedLines.push(<h3 key={i}><strong>{line.substring(2, endIndex)}</strong></h3>); 
+        
+            // Check for list items with links
+            } 
+            else if (line.trim().startsWith('###')) {
+              let startIndex = line.lastIndexOf('###');
+              let endIndex = line.length - 3;
+              if (startIndex !== endIndex) {
+                line = `**${line.substring(0, endIndex)}**${line.substring(endIndex + 3)}`;
+              }
+              parsedLines.push(<h3 key={i}><strong>{line.substring(2, endIndex)}</strong></h3>); 
+        
+            // Check for list items with links
+            } 
+            else if (line.trim().startsWith('##')) {
+              let startIndex = line.lastIndexOf('##');
+              let endIndex = line.length - 2;
+              if (startIndex !== endIndex) {
+                line = `**${line.substring(0, endIndex)}**${line.substring(endIndex + 2)}`;
+              }
+              parsedLines.push(<h3 key={i}><strong>{line.substring(2, endIndex)}</strong></h3>); 
+        
+            // Check for list items with links
+            } 
+            else if (line.startsWith('*')) {
+              const linkStartIndex = line.indexOf('https://');
+              if (linkStartIndex !== -1) {
+                const linkEndIndex = line.indexOf(' ', linkStartIndex);
+                const linkText = line.substring(2, linkStartIndex - 1);
+                const linkUrl = line.substring(linkStartIndex, linkEndIndex);
+                parsedLines.push(
+                  <li key={i}>
+                    {linkText} 
+                    <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+                      (Google Maps link)
+                    </a>
+                  </li>
+                );
+              } else {
+                parsedLines.push(<li key={i}>{line.substring(2)}</li>);
+              }
+        
+            // Check for regular list items
+            } else if (line.startsWith('*')) {
+              parsedLines.push(<li key={i}>{line.substring(1)}</li>);
+        
+            // Treat remaining lines as paragraphs
+            } else {
+              parsedLines.push(<p key={i}>{line}</p>);
+            }
+          }
+        
+          return <div>{parsedLines}</div>;
+        };
 
   return (
     <> <div className="dress-widget-container">
