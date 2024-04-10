@@ -1,33 +1,7 @@
-.image-container {
-    display: flex; 
-    flex-direction: row;/* Use flexbox to arrange items horizontally */
-  }
-
-.image-wrapper {
-    width: 200px; /* Adjust the width of the image container */
-  height: 200px; /* Adjust the height of the image container */
-  border-radius: 10px;
-  margin-left:270px; /* Adjust the border radius for rounded corners */
-  margin-right: 10px;
-  margin-bottom:10px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-  
-.rounded-image {
-    width: 100%; /* Ensure the image takes up the full width of its container */
-    height: auto; /* Maintain the aspect ratio of the image */
-    object-fit: cover;
-  }
-
-  .dressbutt{
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #bc6db4;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 10px;
-  }
+/*outfits{
+    background-image: url('../../public/assets/images/purplebg.jpg'); 
+    background-size: cover; /* Adjust the background size as needed */
+   /* background-repeat: no-repeat; /* Prevent the background from repeating */
+   /* background-position: center; /* Center the background image */
+    /* Add any additional styles for your OutfitsPage component */
+ /* }*/

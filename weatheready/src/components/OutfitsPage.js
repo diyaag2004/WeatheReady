@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { WeatherContext } from '../contexts/WeatherContext';
 import { Link, useNavigate } from 'react-router-dom';
-import './OutfitsPage.css';
+import './WeatherWidget.css';
 
 
 
@@ -63,8 +63,7 @@ const OutfitsPage = () => {
   return (
     <>
       <div className="dress-widget-container">
-<h3>👗 Lets dress you up according to this weather🌦️</h3>
-<img src="/assets/images/wardrobe2.png" alt="Wardrobe" className="wardrobe-image" style={{ width: '50%', height: 'auto' }}/>
+        <h3>👗 Outfits according to climate condition 🌦️ </h3>
 
         {/* Display weather information */}
         {weatherData1 && (
@@ -84,23 +83,23 @@ const OutfitsPage = () => {
         <div className="image-container">
           <div>
             {shirtPrediction && (
-              <div className="image-wrapper">
-                <img src={require(`../images/shirt/${shirtPrediction}.png`)} alt={shirtPrediction} className='rounded-image' />
+              <div className="image-container">
+                <img src={require(`../images/shirt/${shirtPrediction}.png`)} alt={shirtPrediction} />
               </div>
             )}
             {jeansPrediction && (
-              <div className="image-wrapper">
-                <img src={require(`../images/jeans/${jeansPrediction}.png`)} alt={jeansPrediction} className='rounded-image' />
+              <div className="image-container">
+                <img src={require(`../images/jeans/${jeansPrediction}.png`)} alt={jeansPrediction} />
               </div>
             )}
           </div>
         </div>
          
         {/* Button to trigger recommendations */}
-        <button onClick={handleDressRecommendation} className='dressbutt'>
+        <button onClick={handleDressRecommendation} className='dressp'>
           Get Outfits Recommendations
         </button>
-        <Link to="/try-on"> <button className='dressbutt'>
+        <Link to="/try-on"> <button className='dressp'>
          3D try On
         </button> </Link> 
         {/* Error handling and navigation */}

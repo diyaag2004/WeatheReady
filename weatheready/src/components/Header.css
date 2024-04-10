@@ -43,18 +43,6 @@
     margin-right: auto; /* Align the line to the left */
     margin-bottom: 30px;
   }
-  .sun-img{
-    position: absolute;
-    left:800px;
-    top:40%;
-    transform: translateY(-50%);
-    animation-name: floating;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
-
-  }
 
   .cloud-img {
     position: absolute;
