@@ -10,7 +10,7 @@ const WeatherWidget = () => {
   const { weatherData1, setWeatherData1 } = useContext(WeatherContext); // Accessing context for data sharing
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-
+  const [loadingW, setLoadingW] = useState(true);
   const api_key = "94978dafad02672046620496f81cc592"; // Replace with your actual API key
 
   // Function to fetch weather data based on city or current location
@@ -43,6 +43,7 @@ const WeatherWidget = () => {
       setError(true);
     } finally {
       setLoading(false);
+      setLoadingW(false);
     }
   };
 
@@ -75,7 +76,7 @@ const WeatherWidget = () => {
     <>
       <Header />
       <div className="weather-widget-container">
-        <h2 className="widget-title">Weather Widget</h2>
+        <h2 className="widget-title">See weather in you Area🌞</h2>
         <div className="input-group">
           <input
             type="text"
@@ -86,18 +87,18 @@ const WeatherWidget = () => {
           <button onClick={handleCitySearch}>Search by city</button>
           <button onClick={handleLocationSearch}>Search by location</button>
         </div>
-
+        {loadingW && <p>🌸 "Blossoming with excitement! But first, let's see what the weather has in store 🌦️🌸"</p>}
         {loading && <div>Loading...</div>}
         {error && <div>Error fetching weather data</div>}
 
         {weatherData && (
           <div className="weather-info">
-            <h2>Current Weather</h2>
+            <h2>Current Weather 🌦️</h2>
             <p>Location: {weatherData.name}</p>
             <p>Temperature: {weatherData.main.temp} °C</p>
             <p>Weather: {weatherData.weather[0].description}</p>
             <p>Humidity: {weatherData.main.humidity}%</p>
-            <p>Wind Speed: {weatherData.wind.speed} m/s</p>
+            <p>Wind Speed: {weatherData.wind.speed} Km/s</p>
           </div>
         )}
       </div>

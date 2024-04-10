@@ -22,9 +22,7 @@ const OutfitsPage = () => {
   const humidity = weatherData1.main.humidity;
   const windSpeed = weatherData1.wind.speed;
 
-
   // Function to fetch dress recommendations from the backend API
-
   const fetchDressRecommendation = async () => {
     setLoading(true);
     setError(false);
@@ -63,49 +61,47 @@ const OutfitsPage = () => {
   };
 
   return (
-    <div className='outfits-page'>
-
+    <>
       <div className="dress-widget-container">
-        <h3>Lets dress you up according to the weather</h3>
-        <img src="/assets/images/wardrobe2.png" alt="Wardrobe" className="wardrobe-image" style={{ width: '50%', height: 'auto' }} />
+      <h3>👗 Lets dress you up according to this weather🌦️</h3>
+<img src="/assets/images/wardrobe2.png" alt="Wardrobe" className="wardrobe-image" style={{ width: '50%', height: 'auto' }}/>
 
         {/* Display weather information */}
         {weatherData1 && (
           <div>
-            <h4>City: {weatherData1.name}</h4>
+            <h6>City: {weatherData1.name}</h6>
             <h6>Temperature: {weatherData1.main.temp}°C</h6>
-            <h6>Weather: {weatherData1.weather[0].description}%</h6>
+            <h6>Weather: {weatherData1.weather[0].description}</h6>
             <h6>Humidity: {weatherData1.main.humidity}%</h6>
             <h6>Wind Speed: {weatherData1.wind.speed} Km/s</h6>
           </div>
         )}
 
-
         {/* Display loading message */}
-        {loading ? <p className='loading'>Telling you dress Recommendation...</p> : null}
+        {loading ? <p className='loading'>Telling you dress Recommendation 🌞...</p> : null}
 
         {/* Display predicted shirt and jeans images */}
         <div className="image-container">
           <div>
             {shirtPrediction && (
-              <div className="image-container">
-                <img src={require(`../images/shirt/${shirtPrediction}.png`)} alt={shirtPrediction} />
+              <div className="image-wrapper">
+              <img src={require(`../images/shirt/${shirtPrediction}.png`)} alt={shirtPrediction} className='rounded-image' />
               </div>
             )}
             {jeansPrediction && (
-              <div className="image-container">
-                <img src={require(`../images/jeans/${jeansPrediction}.png`)} alt={jeansPrediction} />
+               <div className="image-wrapper">
+               <img src={require(`../images/jeans/${jeansPrediction}.png`)} alt={jeansPrediction} className='rounded-image' />
               </div>
             )}
           </div>
         </div>
          
         {/* Button to trigger recommendations */}
-        <button onClick={handleDressRecommendation} className='dressp'>
+        <button onClick={handleDressRecommendation} className='dressbutt'>
           Get Outfits Recommendations
         </button>
-        <Link to="/try-on"> <button className='dressp'>
-         #D try On
+        <Link to="/try-on"> <button className='dressbutt'>
+         3D try On
         </button> </Link> 
         {/* Error handling and navigation */}
         {error && (
@@ -117,7 +113,8 @@ const OutfitsPage = () => {
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 };
+
 export default OutfitsPage;

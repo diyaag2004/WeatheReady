@@ -31,6 +31,7 @@
     padding-bottom: 25px;
     margin: 0 auto;
     text-align: center;
+    font-family: cursive;
 
   }
   
@@ -45,7 +46,55 @@
 
   .cloud-img {
     position: absolute;
-  left: 300px;
+  left: 220px;
   top: 50%;
   transform: translateY(-50%);
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  }
+  .cloud-img1{
+  position: absolute;
+  left: 70px;
+  top: 40%;
+  transform: translateY(-50%);
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  }
+  .cloud-img2{
+    position: absolute;
+  left: 150px;
+  top: 20%;
+  transform: translateY(-50%);
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  }
+  .sun-img{
+    position: absolute;
+    left:800px;
+    top:40%;
+    transform: translateY(-50%);
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }

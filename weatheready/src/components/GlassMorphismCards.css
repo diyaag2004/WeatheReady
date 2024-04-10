@@ -31,7 +31,8 @@
 .card#card1::before,
 .card#card2::before,
 .card#card3::before,
-.card#card4::before
+.card#card4::before,
+.card#card5::before
 {
   content: '';
   position: absolute;
@@ -72,13 +73,15 @@
  .card#card3::before {
     background-image: url('../../public/assets/images/health.png'); /* Path to your vector image for card3 */
   }
+
   .card#card4::before {
     background-image: url('../../public/assets/images/vacation.png'); /* Path to your vector image for card3 */
   }
-  
+
   .card#card5::before {
     background-image: url('../../public/assets/images/sports.png'); /* Path to your vector image for card3 */
   }
+  
 .card .content {
     padding: 20px;
     text-align: center;
