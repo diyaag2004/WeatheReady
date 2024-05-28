@@ -15,11 +15,14 @@ WeatheReady offers a comprehensive solution by integrating weather-based clothin
 
 ![image](https://github.com/mitali-dxt/WeatheReady/assets/131600078/4a8d3ebc-6cff-4853-bc9f-3d2e16249b4f)
 
-## Our website is deployed on Netlify :
+## Links :
 
-[WeatheReady](https://weathereadyapp.netlify.app/)
+### Our website is deployed on Netlify : [WeatheReady](https://weathereadyapp.netlify.app/)
 
 ### Backend and Flask server is deployed on Render
+
+### Demo Video : [Link](https://youtu.be/eX-CzoEA3uI?si=pQ_PWnYWblNYUEDC)
+
 
 ## Features Overview:
 
